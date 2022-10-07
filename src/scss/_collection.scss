@@ -1,0 +1,105 @@
+.collection {
+	&__container{
+		padding: 0;
+		margin: 0 auto;
+		max-width: 1920px;
+	}
+	&__left {
+		width: 54.17%;
+	}
+	&__right {
+		width: 45.83%;
+	}
+}
+
+.season-collection{
+	padding: 93px 66px 93px 80px;
+	&__title {
+		margin-bottom: 50px;
+	}
+	& .item-watch {
+		width: 100%;
+	}
+}
+
+.new-collection {
+	padding: 100px 20px;
+	&__title {
+		margin-bottom: 30px;
+	}
+	&__btn{
+		font-size: 18px;
+		line-height: 23px;
+		text-align: center;
+		letter-spacing: 0.1em;
+	}
+}
+
+.slider-collection {
+	&__slide .item__watch {
+		width: 100%;
+	}
+}
+
+.new-collection {
+	background: url('../img/collection_new.jpg') center/cover no-repeat;
+}
+
+.bottom-collection {
+	&__image{
+		width: 45.83%;
+		background: url('../img/collection_old.jpg') center/cover no-repeat;
+	}
+	&__img {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+	&__body {
+		width: 54.17%;
+		padding:  100px 10.4% 98px 8.7%;
+		text-align: center;
+	}
+	&__title {
+		margin-bottom: 40px;
+		font-weight: 400;
+	}
+
+	&__text {
+		line-height: 150%;
+		margin-bottom: 64px;
+	}
+}
+
+@media (max-width: 991px) {
+	.collection {
+		&__left,
+		&__right {
+			width: 100%;
+		}
+	}
+	.season-collection {
+		padding: 40px 15px;
+	}
+	.bottom-collection {
+		width: 100%;
+		height: 100%;
+		&__body {
+			padding: 30px 20px;
+		}
+	}
+}
+@media (max-width: 767px) {
+	.bottom-collection {
+		position: relative;
+		&__image {
+			display: none;
+		}
+		&__body {
+			width: 100%;
+		}
+		&__text {
+			margin-bottom: 30px;
+		}
+	}
+}

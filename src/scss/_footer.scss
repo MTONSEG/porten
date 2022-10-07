@@ -1,0 +1,99 @@
+.top-footer__item,
+.form-footer__btn {
+	padding: 10px 20px;
+	color: #fff;
+	background: #000;
+	border: 1px solid transparent;
+	transition: .3s;
+	&:hover {
+		border-color: #fff;
+	}
+}
+
+.top-footer {
+	background: url('../img/footer_bg.jpg') center/cover no-repeat;
+	padding: 80px 0 67px;
+	&__title {
+		font-family: 'Playfair Display';
+		font-weight: 400;
+		line-height: 32px;
+		font-size: 24px;
+		text-transform: uppercase;
+		margin-bottom: 40px;
+	}
+	&_text {
+		line-height: 150%;
+	}
+
+	&__categories {
+		gap: 10px;
+	}
+}
+
+.form-footer {
+	width: 100%;
+	&__input {
+		background: rgba(255, 255, 255, 0.4);
+		width: 60%;
+		padding: 16px;
+		color: #fff;
+		border: 1px solid transparent;
+		&::placeholder {
+			color: #fff;
+		}
+		&:hover {
+			box-shadow: 0 0 2px #fff;
+		}
+		&:focus {
+			border-color: #fff;
+		}
+	}
+	&__btn {
+		text-transform: uppercase;
+		width: 40%;
+		&:focus {
+			border-color: #fff;
+		}
+	}
+}
+
+.bottom-footer {
+	&__body {
+		background: #0F0F0F;
+		font-size: 12px;
+		padding: 17px 0;
+		gap: 10px;
+	}
+	&__agreement {
+		text-decoration: underline;
+	}
+}
+
+@media (max-width: 991px) {
+	.top-footer {
+		padding: 40px 30px;
+		&__row {
+			gap: 30px;
+		}
+		&__title {
+			margin-bottom: 15px;
+		}
+		&__text {
+			line-height: 20px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.top-footer {
+		padding: 40px 0;
+	}
+	.form-footer {
+		gap: 10px;
+		&__input,
+		&__btn {
+			font-size: 18px;
+			width: 100%;
+		}
+	}
+}
