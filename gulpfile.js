@@ -20,29 +20,29 @@ const webpack = require('webpack-stream');
 const paths = {
 	html: {
 		src: 'src/**/*.html',
-		dest: 'dist/'
+		dest: 'docs/'
 	},
 	styles: {
 		src: 'src/scss/*.scss',
-		dest: 'dist/css/'
+		dest: 'docs/css/'
 	},
 	scripts: {
 		src: 'src/js/app.js',
 		watch: 'src/js/**/*.js',
-		dest: 'dist/js'
+		dest: 'docs/js'
 	},
 	images: {
 		src: 'src/img/**/*.{jpg,jpeg,png,gif,webp,svg}',
-		dest: 'dist/img'
+		dest: 'docs/img'
 	},
 	fonts: {
 		src: 'src/fonts/*',
-		dest: 'dist/fonts/'
+		dest: 'docs/fonts/'
 	}
 }
 // Очистка не нужных файлов
 function clean() {
-	return del(['dist/*', '!dist/img', '!dist/fonts']);
+	return del(['docs/*', '!docs/img', '!docs/fonts']);
 }
 
 // Сибираем HTML
@@ -123,7 +123,7 @@ function buildFonts() {
 function watcher() {
 	browserSync.init({
 		server: {
-			baseDir: "./dist"
+			baseDir: "./docs"
 		}
 	})
 	watch(paths.html.dest).on('change', browserSync.reload);
